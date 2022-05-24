@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{OUTLINE}{2}{0}{1}
+\beamer@sectionintoc {2}{INTRODUCTION TO DOMAIN}{3}{0}{2}
+\beamer@sectionintoc {3}{PROBLEM IDENTIFICATION}{4}{0}{3}
+\beamer@sectionintoc {4}{PROPOSEL}{5}{0}{4}
+\beamer@sectionintoc {5}{CONCLUSION}{6}{0}{5}
+\beamer@sectionintoc {6}{REFERENCES}{7}{0}{6}
