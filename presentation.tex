@@ -1,0 +1,156 @@
+\documentclass[svgnames,9pt]{beamer}
+%\usepackage[latin1]{inputenc}
+\usetheme{Warsaw}
+\setbeamertemplate{headline}{}
+\setbeamerfont{footline}{size=\fontsize{6}{8}\selectfont}
+\makeatletter
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+	\insertshorttitle\hfill%
+	\insertframenumber\,/\,\inserttotalframenumber}
+\setbeamertemplate{frametitle}
+{%
+	
+	\nointerlineskip%
+	\vskip-2pt%
+	\hbox{\leavevmode
+		\advance\beamer@leftmargin by -12bp%
+		\advance\beamer@rightmargin by -12bp%
+		\beamer@tempdim=\textwidth%
+		\advance\beamer@tempdim by \beamer@leftmargin%
+		\advance\beamer@tempdim by \beamer@rightmargin%
+		\hskip-\Gm@lmargin\hbox{%
+			\setbox\beamer@tempbox=\hbox{\begin{minipage}[b]{\paperwidth}%
+					\vbox{}\vskip.50ex% NEW: original \vskip-.75ex
+					\leftskip0.3cm%
+					\rightskip0.3cm plus1fil\leavevmode
+					\insertframetitle%
+					\ifx\insertframesubtitle\@empty%
+					\strut\par%
+					\else
+					\par{\usebeamerfont*{framesubtitle}{\usebeamercolor[fg]{framesubtitle}\insertframesubtitle}\strut\par\vskip2ex}% NEW: added \vskip2ex
+					\fi%
+					\nointerlineskip
+					\vbox{}%
+			\end{minipage}}%
+			\beamer@tempdim=\ht\beamer@tempbox%
+			\advance\beamer@tempdim by 2pt%
+			\begin{pgfpicture}{0pt}{0pt}{\paperwidth}{\beamer@tempdim}
+				\usebeamercolor{frametitle right}
+				\pgfpathrectangle{\pgfpointorigin}{\pgfpoint{\paperwidth}{\beamer@tempdim}}
+				\pgfusepath{clip}
+				\pgftext[left,base]{\pgfuseshading{beamer@frametitleshade}}
+			\end{pgfpicture}
+			\hskip-\paperwidth%
+			\box\beamer@tempbox%
+		}%
+		\hskip-\Gm@rmargin%
+	}%
+	\nointerlineskip
+	\vskip-0.2pt
+	\hbox to\textwidth{\hskip-\Gm@lmargin\pgfuseshading{beamer@topshade}\hskip-\Gm@rmargin}
+	\vskip-2pt
+}
+\makeatother
+\addtobeamertemplate{frametitle}{\vspace*{0.5cm}}{\vspace*{0.5cm}}
+
+\title[Recognition of mathematical equations]{\huge \textbf{Recognition of mathematical equations using Deep learning}  } %Project title
+\author[Group 9]{}
+
+\date{}
+
+\begin{document}
+	\begin{frame}
+		
+		\begin{figure}[h!]
+			\includegraphics[scale=0.5]{stthomaskannur.png}
+		\end{figure}
+		
+		\begin{center}      
+			\begin{minipage}[b]{1.0\textwidth}
+				\centering
+				Department of Computer Science and Engineering\\
+				St. Thomas College of Engineering and Technology\\Mattannur
+			\end{minipage}%
+		\end{center}
+		
+		\titlepage
+		
+		\begin{minipage}[t]{0.5\textwidth}
+			\vspace{-2cm}
+			\begin{flushleft}
+				{ \textit{Author}:\vspace*{0.1cm} \\Akhil C V (STM19CS007)\\Aashish Anil (STM19CS002)\\Sejal T P (STM19CS050)\\Sangeerthana P (STM19CS048) } %students name
+			\end{flushleft}
+		\end{minipage}%
+		%
+		\begin{minipage}[t]{0.5\textwidth}
+			\vspace{-2cm}
+			\begin{flushright}
+				{\textit{Supervisor}:\vspace*{0.1cm} \\ Mr.Madhu K} %supervisor name
+			\end{flushright}    
+		\end{minipage}%
+		
+		\vspace{-0.7cm}
+		\begin{center}      
+			\begin{minipage}[b]{0.5\textwidth}
+				\centering  
+				\small Academic Year \\ 2021-22\\ \today
+			\end{minipage}%
+		\end{center}    
+	\end{frame}
+\section{OUTLINE}
+\begin{frame}{OUTLINE}
+	\tableofcontents
+\end{frame}
+\section{INTRODUCTION TO DOMAIN}
+\begin{frame}{INTRODUCTION TO DOMAIN}
+Deep learning (DL), a branch of machine learning (ML) and artificial intelligence (AI) is nowadays considered as a core technology of today’s Fourth Industrial Revolution. Due to its learning capabilities from data, DL technology originated from artificial neural network, has become a hot topic in the context of computing, and is widely applied in various application areas like healthcare, visual recognition, text analytics, cybersecurity, and many more. However, building an appropriate DL model is a challenging task, due to the dynamic nature and variations in real-world problems and data. Moreover, the lack of core understanding turns DL methods into black-box machines that hamper development at the standard level. This article presents a structured and comprehensive view on DL techniques including a taxonomy considering various types of real-world tasks like supervised or unsupervised. In our taxonomy, we take into account deep networks for supervised or discriminative learning, unsupervised or generative learning as well as hybrid learning and relevant others. We also summarize real-world application areas where deep learning techniques can be used. Finally, we point out ten potential aspects for future generation DL modeling with research directions. Overall, this article aims to draw a big picture on DL modeling.
+\end{frame}
+
+\section{PROBLEM IDENTIFICATION}
+\begin{frame}{PROBLEM IDENTIFICATION}
+includegraphics[scale=0.5]{1.png}
+\end{frame}
+\section{PROPOSEL}
+\begin{frame}{PROPOSEL}
+\end{frame}
+\section{CONCLUSION}
+\begin{frame}{ CONCLUSION }	
+We have proposed a deep neural network model with encoder-
+decoder architecture to translate images with math formulas into 
+their LaTeX source sequences. Our model was trained in an end-
+to-end manner without explicit labels about image segmentation 
+and grammar information. Nevertheless, the model managed to 
+learn to produce LaTeX output sequence that can reproduce the 
+input image. Using the BLEU score as the reward function and 
+the policy gradient algorithm in reinforcement learning, we 
+successfully trained the neural network with sequence-level 
+objective function and eliminate the exposure bias problem. We 
+tested the model on the IM2LATEX-100K dataset and 
+compared it with four state-of-the-art solutions, and showed the 
+best performance on both sequence-based and image-based 
+measurements. The model also showed more robust 
+performance towards longer LaTeX sequences.
+
+\end{frame}
+\section{REFERENCES}
+\begin{frame}{REFERENCES}
+\begin{thebibliography}{99}
+	\bibitem{india} M. Suzuki, F. Tamari, R. Fukuda, S. Uchida, and T. 
+Kanahori, "INFTY: an integrated OCR system for 
+mathematical documents," in Proceedings of the 2003 ACM 
+symposium on Document engineering, 2003, pp. 95-104: 
+ACM. 
+
+	
+	
+	\bibitem{rpi}
+	Y. Deng, A. Kanervisto, and A. M. Rush, "What you get is 
+what you see: A visual markup decompiler," arXiv preprint 
+arXiv:1609.04938, vol. 10, pp. 32-37, 2016
+	
+	\bibitem{japan} J. Wang, Y. Sun, and S. Wang, "Image To Latex with 
+DenseNet Encoder and Joint Attention," Procedia computer 
+science, vol. 147, pp. 374-380, 2019.
+\end{thebibliography}
+\end{frame}
+\end{document}
